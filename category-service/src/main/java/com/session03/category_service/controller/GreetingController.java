@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/greeting")
 public class GreetingController {
 
-    @Value("${app.message}") // get value from config server
+    @Value("${app.message}") // get value from config server, with default fallback
     private String message;
 
     @GetMapping
